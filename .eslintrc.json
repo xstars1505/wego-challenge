@@ -1,10 +1,16 @@
 {
   "parser": "@typescript-eslint/parser",
-  "plugins": ["@typescript-eslint", "react", "react-hooks", "eslint-plugin-import", "prettier"],
+  "plugins": ["@typescript-eslint", "react", "react-hooks", "eslint-plugin-import", "prettier", "@tanstack/query"],
   "env": {
     "browser": true
   },
-  "extends": ["eslint:recommended", "plugin:@typescript-eslint/recommended", "plugin:react/recommended", "plugin:prettier/recommended"],
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:react/recommended",
+    "plugin:prettier/recommended",
+    "plugin:@tanstack/eslint-plugin-query/recommended"
+  ],
   "parserOptions": {
     "project": ["tsconfig.json"],
     "ecmaVersion": 2020,
@@ -25,7 +31,10 @@
     "react/prop-types": "off",
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
-    "no-shadow": ["error", { "builtinGlobals": false, "hoist": "functions", "allow": [] }]
+    "no-shadow": ["error", { "builtinGlobals": false, "hoist": "functions", "allow": [] }],
+    "@tanstack/query/exhaustive-deps": "error",
+    "@tanstack/query/no-rest-destructuring": "warn",
+    "@tanstack/query/stable-query-client": "error"
   },
   "settings": {
     "react": {
