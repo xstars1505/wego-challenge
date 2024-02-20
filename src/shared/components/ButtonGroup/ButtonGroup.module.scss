@@ -1,0 +1,30 @@
+@import 'src/styles/variables';
+
+.buttonGroup {
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  :global .btn {
+    border-radius: 0;
+    border-left-width: 0;
+    border-right-width: 0;
+    margin-left: -1px;
+    box-shadow: inset 1px 0 0 0 $mikado-yellow, inset -1px 0 0 0 $mikado-yellow, inset -1px 0 0 0 $mikado-yellow;
+
+    &.active {
+      background-color: $mikado-yellow;
+      color: $white;
+    }
+
+    &:first-child {
+      border-top-left-radius: 8px;
+      border-bottom-left-radius: 8px;
+    }
+
+    &:last-child {
+      border-top-right-radius: 8px;
+      border-bottom-right-radius: 8px;
+    }
+  }
+}

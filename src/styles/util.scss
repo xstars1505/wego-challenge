@@ -6,6 +6,13 @@ $breakpoint-lg: 992px;
 $breakpoint-xl: 1200px;
 
 // Responsive classes
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
 @media (min-width: $breakpoint-sm) {
   .container {
     max-width: 540px;

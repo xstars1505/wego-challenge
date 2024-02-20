@@ -1,0 +1,16 @@
+@import 'src/styles/variables';
+
+.cardContainer {
+  position: relative;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 0.25rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  .cardBody {
+    padding: 1rem;
+
+    .cardTitle {
+      color: $primary-text;
+      font-weight: 600;
+    }
+  }
+}

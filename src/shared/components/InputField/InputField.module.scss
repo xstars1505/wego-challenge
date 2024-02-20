@@ -1,0 +1,29 @@
+@import 'src/styles/variables';
+
+.inputFieldContainer {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+
+  .inputField {
+    padding: 8px 8px 8px 28px;
+    border: 1px solid $mikado-yellow;
+    background-color: $white;
+    border-radius: 4px;
+    outline: none;
+    transition: border-color 0.2s ease-in-out;
+    color: $dim-gray;
+
+    &:focus {
+      border-color: $mikado-yellow;
+    }
+  }
+
+  .icon {
+    position: absolute;
+    left: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: $dim-gray;
+  }
+}
