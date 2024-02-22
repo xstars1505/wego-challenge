@@ -8,11 +8,11 @@
   border-radius: 8px;
   color: $black;
   padding: 12px;
+  font-weight: 400;
 
   &:hover {
     background-color: $mikado-yellow;
-    color: $white;
+    font-weight: 500;
     cursor: pointer;
   }
 }
-

@@ -5,14 +5,13 @@ import classnames from 'classnames';
 
 type Props = {
   buttonLabels: string[];
-
-  onClick: () => void;
+  onClick: (index: number) => void;
 };
 const ButtonGroup: React.FC<Props> = ({ buttonLabels, onClick }) => {
   const [currentIndex, setCurrentIndex] = useState<number>(-1);
   const handleSelectButton = (index: number) => {
     setCurrentIndex(index);
-    onClick();
+    onClick(index);
   };
   return (
     <div className={styles.buttonGroup}>
