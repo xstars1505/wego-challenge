@@ -15,7 +15,7 @@ const Card: React.FC<Props> = ({ title, className, imageHeight = 225, imageSrc, 
     <div className={classNames(styles.cardContainer, className)}>
       <img className={styles.cardImage} src={imageSrc} height={imageHeight} alt="media" />
       <div className={styles.cardBody}>
-        <h5 className={styles.cardTitle}>{title}</h5>
+        <h4 className={styles.cardTitle}>{title}</h4>
         {children}
       </div>
     </div>
