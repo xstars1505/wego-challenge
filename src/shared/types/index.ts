@@ -1,3 +1,9 @@
+export interface BaseComponentProps {
+  id?: string;
+  'data-test-id'?: string;
+  className?: string;
+}
+
 export interface Category {
   id: string;
   name: string;

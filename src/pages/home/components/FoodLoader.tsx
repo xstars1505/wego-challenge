@@ -2,10 +2,12 @@ import React from 'react';
 import ContentLoader from 'react-content-loader';
 
 const FoodLoader = () => (
-  <ContentLoader width={'100%'} height={400} viewBox="0 0 450 400" backgroundColor="#fff" foregroundColor="#dedede">
-    <rect x="43" y="304" rx="4" ry="4" width="271" height="9" />
-    <rect x="44" y="323" rx="3" ry="3" width="119" height="9" />
-    <rect x="42" y="77" rx="10" ry="10" width="388" height="217" />
+  <ContentLoader width={'100%'} backgroundColor="#fff" foregroundColor="#dedede" speed={2} height={300} viewBox="0 0 400 460">
+    <rect x="0" y="0" rx="8" ry="8" width="400" height="400" />
+    <rect x="0" y="416" rx="8" ry="8" width="176" height="14" />
+    <rect x="0" y="442" rx="8" ry="8" width="80" height="14" />
+    <rect x="90" y="442" rx="8" ry="8" width="80" height="14" />
+    <rect x="180" y="442" rx="8" ry="8" width="80" height="14" />
   </ContentLoader>
 );
 

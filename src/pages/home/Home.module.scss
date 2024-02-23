@@ -1,0 +1,19 @@
+@import 'src/styles/util';
+
+.foodContainer {
+  padding: 2rem 0;
+
+  .foodTags {
+    display: flex;
+    column-gap: 0.5rem;
+    row-gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+
+  .buttonsContainer {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-top: 1.5rem;
+  }
+}

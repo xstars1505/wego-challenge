@@ -3,20 +3,27 @@
 .cardContainer {
   position: relative;
   border: 1px solid rgba(0, 0, 0, 0.125);
-  border-radius: 0.25rem;
+  border-radius: 0.5rem;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background: $white;
+  height: 100%;
 
   .cardImage {
     width: 100%;
     object-fit: cover;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
   }
 
   .cardBody {
     padding: 1rem;
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
 
     .cardTitle {
       color: $primary-text;
       font-weight: 600;
+      margin: 0 0 1rem;
     }
   }
 }

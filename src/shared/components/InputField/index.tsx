@@ -1,14 +1,17 @@
 import React, { useState } from 'react';
 import { IconType } from 'react-icons';
+import classnames from 'classnames';
+import { BaseComponentProps } from 'shared/types';
 import styles from './InputField.module.scss';
 
-interface Props {
+type Props = {
   placeholder: string;
+  className?: string;
   icon?: IconType;
   onChange: (value: string) => void;
-}
+} & BaseComponentProps;
 
-const InputField: React.FC<Props> = ({ placeholder, icon: Icon, onChange }) => {
+const InputField: React.FC<Props> = ({ placeholder, className, icon: Icon, onChange }) => {
   const [value, setValue] = useState('');
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -17,7 +20,7 @@ const InputField: React.FC<Props> = ({ placeholder, icon: Icon, onChange }) => {
   };
 
   return (
-    <div className={styles.inputFieldContainer}>
+    <div className={classnames(styles.inputFieldContainer, className)}>
       {Icon && <Icon className={styles.icon} />}
       <input type="text" placeholder={placeholder} value={value} onChange={handleChange} className={styles.inputField} />
     </div>

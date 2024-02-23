@@ -13,6 +13,7 @@
     outline: none;
     transition: border-color 0.2s ease-in-out;
     color: $dim-gray;
+    line-height:2;
 
     &:focus {
       border-color: $mikado-yellow;
