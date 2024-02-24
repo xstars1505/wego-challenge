@@ -1,0 +1,25 @@
+@import 'src/styles/variables';
+
+.alert {
+  position: relative;
+  padding: 0.75rem 1.25rem;
+  margin-bottom: 1rem;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+
+  &.alert-error {
+    color: $error;
+    background-color: lighten($error, 20%);
+    border-color: darken($error, 20%);
+}
+  &.alert-success {
+    color: $mint;
+    background-color: lighten($mint, 20%);
+    border-color: darken($mint, 20%);
+}
+  &.alert-warning {
+    color: $mikado-yellow;
+    background-color: lighten($mikado-yellow, 20%);
+    border-color: darken($mikado-yellow, 20%);
+}
+}
