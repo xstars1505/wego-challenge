@@ -21,7 +21,7 @@ const InputField: React.FC<Props> = ({ placeholder, className, icon: Icon, onCha
 
   return (
     <div className={classnames(styles.inputFieldContainer, className)}>
-      {Icon && <Icon className={styles.icon} />}
+      {Icon && <Icon data-testid="icon" className={styles.icon} />}
       <input type="text" placeholder={placeholder} value={value} onChange={handleChange} className={styles.inputField} />
     </div>
   );

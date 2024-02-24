@@ -9,6 +9,7 @@ type Props = {
   loading?: boolean;
   onClick: () => void;
 } & BaseComponentProps;
+
 const Button: React.FC<Props> = ({ label, className, disabled, loading, onClick }) => {
   return (
     <button className={classnames('btn', styles.button, className)} disabled={disabled || loading} onClick={onClick}>
