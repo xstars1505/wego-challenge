@@ -13,6 +13,7 @@ import InputField from 'shared/components/InputField';
 import { Category } from 'shared/types';
 import styles from './Home.module.scss';
 import Alert from 'shared/components/Alert';
+import Promotion from 'pages/home/components/Promotion';
 
 const HomePage = () => {
   const [queryParams, setQueryParams] = useState({
@@ -67,6 +68,7 @@ const HomePage = () => {
                       <Rating rating={item.rating.toFixed(2)} />
                       <CookingTime from={item.minCookTime} to={item.maxCookTime} />
                       {item.isNew && <NewFood />}
+                      {item.promotion && <Promotion promotion={item.promotion} />}
                     </div>
                   </Card>
                 </div>

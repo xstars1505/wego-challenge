@@ -1,0 +1,26 @@
+@import 'src/styles/variables';
+
+.promotion {
+  color: $white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 3.5rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
+  .buyOneGetOne {
+    font-size: 0.875rem;
+    font-weight: 500;
+    background-color: $medium-slate-blue;
+  }
+  .discount {
+    background-color: $light-red;
+  }
+  .gift {
+    background-color: $picton-blue;
+  }
