@@ -19,7 +19,7 @@
 }
   &.alert-warning {
     color: $mikado-yellow;
-    background-color: lighten($mikado-yellow, 20%);
-    border-color: darken($mikado-yellow, 20%);
+    background-color: lighten($mikado-yellow, 40%);
+    border-color: darken($mikado-yellow, 10%);
 }
 }

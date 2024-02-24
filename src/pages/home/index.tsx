@@ -46,34 +46,44 @@ const HomePage = () => {
       pageNumber: queryParams.pageNumber + 1,
     });
   };
-
-  const renderFoodList = () => {
+  const renderContents = () => {
     return isGetCategoriesError || isGetFoodError ? (
       <Alert variant="error" message="There was an error, please try to refresh the page" />
     ) : (
+      renderFoodList()
+    );
+  };
+  const renderFoodList = () => {
+    return (
       <>
         <FoodCategories categories={categories || []} onSelectCategory={handleSelectCategory} />
-        <div className="row">
-          {food.map(item => (
-            <div key={item.id} className="col-12 col-sm-6 col-md-4  col-lg-4 col-xl-3 mb-4">
-              <Card key={item.id} title={item.name} imageSrc={item.imageUrl}>
-                <div className={styles.foodTags}>
-                  <Rating rating={item.rating.toFixed(2)} />
-                  <CookingTime from={item.minCookTime} to={item.maxCookTime} />
-                  {item.isNew && <NewFood />}
+        {food.length > 0 ? (
+          <>
+            <div className="row">
+              {food.map(item => (
+                <div key={item.id} className="col-12 col-sm-6 col-md-4  col-lg-4 col-xl-3 mb-4">
+                  <Card key={item.id} title={item.name} imageSrc={item.imageUrl}>
+                    <div className={styles.foodTags}>
+                      <Rating rating={item.rating.toFixed(2)} />
+                      <CookingTime from={item.minCookTime} to={item.maxCookTime} />
+                      {item.isNew && <NewFood />}
+                    </div>
+                  </Card>
                 </div>
-              </Card>
+              ))}
             </div>
-          ))}
-        </div>
-        <div className={styles.buttonsContainer}>{isLoadMore && <Button label={'+Show More'} onClick={loadMoreFood} />}</div>
+            <div className={styles.buttonsContainer}>{isLoadMore && <Button label={'+Show More'} onClick={loadMoreFood} />}</div>
+          </>
+        ) : (
+          <Alert variant="warning" message="There are no restaurants" />
+        )}
       </>
     );
   };
 
   return (
     <div className={styles.foodContainer}>
-      <InputField className="mb-4" placeholder={'aa'} icon={FaSearch} onChange={handleSearch} />
+      <InputField className="mb-4" placeholder="Enter restaurant name" icon={FaSearch} onChange={handleSearch} />
       {isLoadingCategories || isLoadingFood ? (
         <div className="row">
           <>
@@ -85,7 +95,7 @@ const HomePage = () => {
           </>
         </div>
       ) : (
-        renderFoodList()
+        renderContents()
       )}
     </div>
   );
