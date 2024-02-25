@@ -13,7 +13,9 @@ const FoodCategories: React.FC<Props> = ({ categories, onSelectCategory }) => {
     onSelectCategory(categories[index]);
   };
 
-  return <ButtonGroup className="mb-4" preselectedIndex={0} buttonLabels={buttonLabels} onClick={handleCategoryClick} />;
+  return (
+    <ButtonGroup className="mb-4" testId="categories" preselectedIndex={0} buttonLabels={buttonLabels} onClick={handleCategoryClick} />
+  );
 };
 
 export default FoodCategories;

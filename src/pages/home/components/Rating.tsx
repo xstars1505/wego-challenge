@@ -9,7 +9,7 @@ type Props = {
 const Rating: React.FC<Props> = ({ rating }) => {
   return (
     <Tag>
-      <FaStar className="mr-1" />
+      <FaStar data-testid="FaStar" className="mr-1" />
       {rating}
     </Tag>
   );

@@ -22,6 +22,7 @@
   },
   "devDependencies": {
     "@tanstack/eslint-plugin-query": "^5.20.1",
+    "@testing-library/react-hooks": "^8.0.1",
     "@typescript-eslint/eslint-plugin": "5.62.0",
     "@typescript-eslint/parser": "5.62.0",
     "eslint": "8.52.0",
@@ -38,7 +39,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "react-scripts test --coverage --watchAll=false --forceExit",
     "eject": "react-scripts eject",
     "lint": "eslint . --ext .ts,.tsx",
     "lint:fix": "eslint . --ext .ts,.tsx --fix"
@@ -59,6 +60,17 @@
       "last 1 chrome version",
       "last 1 firefox version",
       "last 1 safari version"
+    ]
+  },
+  "jest": {
+    "resetMocks": false,
+    "collectCoverageFrom": [
+      "src/**/*.{ts,tsx}",
+      "!src/pages/*.{ts,tsx}"
+    ],
+    "coveragePathIgnorePatterns": [
+      "\\.d.ts$",
+      "constants.ts"
     ]
   }
 }

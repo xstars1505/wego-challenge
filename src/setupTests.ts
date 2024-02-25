@@ -4,6 +4,7 @@
 // learn more: https://github.com/testing-library/jest-dom
 import '@testing-library/jest-dom';
 import { server } from 'mocks/server';
+import { queryClient } from 'shared/test/TestRoot';
 
 beforeAll(() => {
   // Enable the mocking in tests.
@@ -13,6 +14,8 @@ beforeAll(() => {
 afterEach(() => {
   // Reset any runtime handlers tests or query results may use.
   server.resetHandlers();
+  queryClient.clear();
+
   jest.clearAllMocks();
 });
 

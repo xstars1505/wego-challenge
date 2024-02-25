@@ -12,7 +12,7 @@ type Props = {
 
 const Card: React.FC<Props> = ({ title, className, imageHeight = 225, imageSrc, children }) => {
   return (
-    <div className={classNames(styles.cardContainer, className)}>
+    <div className={classNames('card', styles.cardContainer, className)}>
       <img className={styles.cardImage} src={imageSrc} height={imageHeight} alt="media" />
       <div className={styles.cardBody}>
         <h4 className={styles.cardTitle}>{title}</h4>

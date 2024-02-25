@@ -1,6 +1,6 @@
 export interface BaseComponentProps {
   id?: string;
-  'data-test-id'?: string;
+  testId?: string;
   className?: string;
 }
 

@@ -10,14 +10,14 @@ type Props = {
   onClick: (index: number) => void;
 } & BaseComponentProps;
 
-const ButtonGroup: React.FC<Props> = ({ buttonLabels, preselectedIndex, className, onClick }) => {
+const ButtonGroup: React.FC<Props> = ({ buttonLabels, preselectedIndex, className, testId, onClick }) => {
   const [currentIndex, setCurrentIndex] = useState<number>(preselectedIndex !== undefined ? preselectedIndex : -1);
   const handleSelectButton = (index: number) => {
     setCurrentIndex(index);
     onClick(index);
   };
   return (
-    <div className={classnames(styles.buttonGroup, className)}>
+    <div className={classnames(styles.buttonGroup, className)} data-testid={testId}>
       {buttonLabels.map((label, index) => (
         <Button
           key={index}

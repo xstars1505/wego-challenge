@@ -3,6 +3,7 @@ import ContentLoader from 'react-content-loader';
 
 const FoodLoader = () => (
   <ContentLoader
+    data-testid="food-loader"
     width={'100%'}
     backgroundColor="#fff"
     foregroundColor="#dedede"

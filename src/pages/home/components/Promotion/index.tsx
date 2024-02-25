@@ -17,11 +17,11 @@ const Promotion: React.FC<Props> = ({ promotion }) => {
       break;
     case 'gift':
       promotionType = styles.gift;
-      component = <FaGift />;
+      component = <FaGift data-testid="FaGift" />;
       break;
     default:
       promotionType = styles.discount;
-      component = <FaPercent fontSize="0.75rem" />;
+      component = <FaPercent data-testid="FaPercent" fontSize="0.75rem" />;
       break;
   }
 
